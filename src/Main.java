@@ -14,5 +14,6 @@ public class Main {
         BST bst= new BST();
         bst.arbolBST(alist);
         bst.inOrder();
+        System.out.println("La profundida es: " + bst.profundida());
     }
 }

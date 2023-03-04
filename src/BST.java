@@ -109,4 +109,23 @@ public class BST {
         System.out.println(current.getKey());
         inOrder(current.getLeft());
     }
+
+    public int profundida(){
+        return profundida(root);
+    }
+    
+    private int profundida(Node node){
+        if(node == null){
+            return 0;
+        }
+        int izquierdo= profundida(node.getLeft());
+        int derecho= profundida(node.getRight());
+
+        if (izquierdo > derecho){
+            return izquierdo +1;
+        }else {
+            return derecho + 1;
+        }
+
+    }
 }
